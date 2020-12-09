@@ -30,12 +30,12 @@ const Btn3 = document.getElementById("Btn3");
 const movieDataRef = document.getElementById("movieDataRef");
 
 Btn3.addEventListener("click", function() {
-    fetch(`https://api.themoviedb.org/3/movie/264660?api_key=6fedca7dd5395cO4dbc1ad8bb342351a&language=en-US`)
+    fetch(` https://api.themoviedb.org/3/movie/264660?api_key=6fedca7dd5395c04dbc1ad8bb342351a&language=en-US`)
         .then(function(response) {
             return response.json()
         })
         .then(function(data) {
-
-            movieDataRef.innerHTML = `<h3>${data.original_title}</h3> <p>${data.dataOverview}</p>`;
+            movieDataRef.innerHTML = `<h3>${data.original_title}</h3>
+            <p>${data.overview}</p>`;
         });
 });
