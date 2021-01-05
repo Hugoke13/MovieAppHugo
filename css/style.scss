@@ -1,23 +1,75 @@
-@import "reset";
-@import "variables";
-body {
-    background-color: #fff;
-    display: flex;
-    justify-content: space-between;
-    button {
-        background-color: yellow;
-        color: rgb(160, 20, 130);
-    }
-    .col {
-        width: 30%;
-        min-height: 100px;
-        background-color: black;
-        ul {
-            color: white;
-        }
-        p,
-        h3 {
-            color: beige;
-        }
-    }
-}
+            @import "reset";
+            @import "variables";
+            body {
+                background-color: #ccc;
+                display: flex;
+                justify-content: space-around;
+                button {
+                    background-color: yellow;
+                    color: rgb(160, 20, 130);
+                    border-style: none;
+                    border-radius: 30%;
+                }
+                button:hover {
+                    background-color: greenyellow;
+                }
+                .col {
+                    width: 30%;
+                    min-height: 100px;
+                    color: black;
+                    background-color: #aaa;
+                    padding-top: 20px;
+                    ul {
+                        color: rgb(71, 7, 7);
+                    }
+                    h3 {
+                        margin-top: -5%;
+                        padding: 1em;
+                        color: green;
+                        font-size: 300%;
+                        text-decoration: underline;
+                    }
+                    p {
+                        color: rgb(71, 7, 7);
+                        font-size: 200%;
+                        margin-top: -10%;
+                        margin-left: 15%;
+                    }
+                }
+            }
+            
+            #Btn1,
+            #Btn2,
+            #Btn3 {
+                font-size: 150%;
+                padding: 25px;
+                margin-bottom: 20px;
+            }
+            
+            #list1,
+            #list2,
+            #movieDataRef {
+                color: rgb(4, 4, 48);
+            }
+            
+            #list2 {
+                max-height: 85vh;
+                overflow: auto;
+            }
+            
+            #list1 {
+                margin-top: 8%;
+                font-size: 200%;
+            }
+            
+            #movieDataRef {
+                max-height: 85vh;
+                overflow: auto;
+            }
+            
+            img {
+                width: 100%;
+                padding: 10%;
+                height: auto;
+                margin-bottom: 1em;
+            }

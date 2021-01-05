@@ -7,10 +7,10 @@ Btn1.addEventListener("click", function() {
             return response.json()
         })
         .then(function(data) {
-
-            list1.innerHTML = data.genres.map((genre) => `<li>${genre.name}</li>`).join("")
+            list1.innerHTML = data.genres.map((genre) => `<li>* ${genre.name}</li > `).join("");
         });
 });
+
 const Btn2 = document.getElementById("Btn2");
 const list2 = document.getElementById("list2");
 
@@ -21,7 +21,10 @@ Btn2.addEventListener("click", function() {
         })
         .then(function(data) {
 
-            list2.innerHTML = data.results.map((result) => `<li><img src="https://image.tmdb.org/t/p/w500/${result.profile_path}"</li>`).join("")
+            list2.innerHTML = data.results.map((result) =>
+                `<li><img src="https://image.tmdb.org/t/p/w500/${result.profile_path}">
+                <p id="naam">${result.name}</p>
+                </li>`).join("")
         });
 
 });
@@ -35,7 +38,8 @@ Btn3.addEventListener("click", function() {
             return response.json()
         })
         .then(function(data) {
-            movieDataRef.innerHTML = `<h3>${data.original_title}</h3>
-            <p>${data.overview}</p>`;
+            movieDataRef.innerHTML = `<h3>${data.original_title}</h3>    
+            <p>${data.overview}</p>
+            <img src="https://image.tmdb.org/t/p/w500/${data.poster_path}">`;
         });
 });
